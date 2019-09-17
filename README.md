@@ -19,3 +19,11 @@ npm run build
 ```
 npm run lint
 ```
+
+### upload your code to oss
+```
+npm run upload
+```
+```sh
+npm install @zooey1184/upload_to_oss
+```
