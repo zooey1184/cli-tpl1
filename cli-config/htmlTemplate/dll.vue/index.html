@@ -6,14 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
   <meta content="telephone=no" name="format-detection" />
-  <link rel="icon" href="./favicon.ico">
 </head>
 
 <body>
   <noscript>
-    <strong>请升级您的app或其他手机尝试</strong>
+    <strong>please try update your system or change browser</strong>
   </noscript>
   <div id="app"></div>
+  <% if (VUE_APP_ENV === "production") { %>
+  <!-- 运行时依赖 -->
+  <script src="//cdn.staticfile.org/vue/2.5.17/vue.runtime.min.js" type="text/javascript"></script>
+  <% } %>
 </body>
 
 </html>
