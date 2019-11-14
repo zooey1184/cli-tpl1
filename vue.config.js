@@ -3,11 +3,13 @@ const ENV = process.env.NODE_ENV || 'production'
 const path = require('path')
 const { entry, tip } = require('./cli-config/vue.config/entry')
 const { publicPath, outputDir } = require('./cli-config/vue.config/output')
+const cssFn = require('./cli-config/vue.config/css')
 
 tip()
 module.exports = {
   publicPath: publicPath(),
   pages: entry(),
+  css: cssFn(),
   productionSourceMap: false,
   configureWebpack: config => {
     if ((ENV === 'production')) {

@@ -6,9 +6,9 @@ const detail = proObj[proObj.useEnv]
 
 const cssFn = () => {
   let obj = {
-    extract: detail.decorator && detail.find(item => item === 'noCss')
+    extract: !(detail.decorator && detail.decorator.some(item => item === 'noCss'))
   }
-  if (detail.find(item => item === 'rem')) {
+  if (detail.decorator.find(item => item === 'rem')) {
     /*
      * 自动转化rem 满足三个条件
      * 一个是html没有meta viewport
@@ -19,8 +19,8 @@ const cssFn = () => {
       loaderOptions: {
         postcss: {
           plugins: [
-            require('postcss-px2rem')({
-              remUnit: 30 // 换算的基数
+            require('postcss-plugin-px2rem')({
+              rootValue: 100
             })
           ]
         }
