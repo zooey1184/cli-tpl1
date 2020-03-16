@@ -1,20 +1,27 @@
 #!/usr/bin/env node
+const fs = require('fs')
 const tplObj = require(`${__dirname}/../template`)
 const localTemplate = `${__dirname}/../template.json`
-const p = require('./../tools/getPro')
+const p = require('./../tools/getPro') // 获取入口数组的方法
+// 获取运行的环境
 const env = process.env.runEnv
+
+// 获取运行的项目 看看是否有设置的Pro 否则使用配置中的usePro[即上次运行的项目]
 const PRO = process.env.pro || tplObj.usePro
+
+// 查看自己定义的或者配置的项目是否合法
 const proName = process.env.pro ? p() : p(PRO)
-const fs = require('fs')
-if (!PRO || (PRO && !tplObj[proName.toString()])) {
+
+// 如果不 存在项目且对应环境下有相关配置
+if (!(tplObj[proName.toString()] && tplObj[proName.toString()][env])) {
   let obj = {
-    useEnv: env,
-    [env]: {
-      history: true,
-      baseUrl: env === 'local' ? '/' : './',
-      decorator: [],
-      pro: proName
-    }
+    useEnv: env
+  }
+  obj[env] = {
+    history: true,
+    baseUrl: env === 'local' ? '/' : './',
+    decorator: [],
+    pro: proName
   }
   tplObj[proName.toString()] = obj
 }
