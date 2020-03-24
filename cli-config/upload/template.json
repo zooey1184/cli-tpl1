@@ -1,0 +1,75 @@
+{
+  "pages__topvay": {
+    "production": {
+      "remotePath": "/jianbing/base/h5/pages/topvay",
+      "localPath": "dist",
+      "host": "161.117.86.130",
+      "username": "kaifa_h5",
+      "password": "4fg89R32ZDQmu9P6R9sAz",
+      "port": "20002",
+      "name": "vietnam工程  topvay项目"
+    },
+    "dev": {
+      "host": "47.99.110.145",
+      "port": "20002",
+      "remotePath": "/jianbing/base/lanjian/application/views/h5/pages/topvay",
+      "localPath": "dist",
+      "username": "root",
+      "password": "UQKz6Sdssg3U2U3LpUTD4",
+      "name": "vietnam工程  topvay项目"
+    }
+  },
+  "pages__topdong": {
+    "production": {
+      "remotePath": "/jianbing/base/h5/pages/topdong",
+      "localPath": "dist",
+      "host": "161.117.86.130",
+      "username": "kaifa_h5",
+      "password": "4fg89R32ZDQmu9P6R9sAz",
+      "port": "20002",
+      "name": "vietnam工程  topdong项目"
+    },
+    "dev": {
+      "host": "47.99.110.145",
+      "port": "20002",
+      "remotePath": "/jianbing/base/lanjian/application/views/h5/pages/topdong",
+      "localPath": "dist",
+      "username": "root",
+      "password": "UQKz6Sdssg3U2U3LpUTD4",
+      "name": "vietnam工程  topdong项目"
+    }
+  },
+  "vayaDong__index": {
+    "dev": {
+      "host": "47.99.110.145",
+      "port": "20002",
+      "remotePath": "/jianbing/base/lanjian/application/views/h5/pages/vayaDong",
+      "localPath": "dist",
+      "name": "vayadong index",
+      "username": "root",
+      "password": "UQKz6Sdssg3U2U3LpUTD4"
+    }
+  },
+  "pureWeb__privacy": {
+    "dev": {
+      "host": "47.99.110.145",
+      "port": "20002",
+      "remotePath": "/jianbing/base/lanjian/application/views/vietnam/pages/vayaDong/privacy",
+      "localPath": "src/pureWeb/privacy",
+      "name": "pureWeb__privacy项目",
+      "username": "root",
+      "password": "UQKz6Sdssg3U2U3LpUTD4"
+    }
+  },
+  "pureWeb__topChoicePolicy": {
+    "dev": {
+      "host": "47.99.110.145",
+      "port": "20002",
+      "remotePath": "/jianbing/base/lanjian/application/views/vietnam/pages/vayaDong/topChoicePolicy",
+      "localPath": "src/pureWeb/topChoicePolicy",
+      "name": "pureWeb__topChoicePolicy项目",
+      "username": "root",
+      "password": "UQKz6Sdssg3U2U3LpUTD4"
+    }
+  }
+}
